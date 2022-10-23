@@ -5,7 +5,7 @@ interface props {
     onOpen: any;
 }
 function CustomMenuButton(props: props) {
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { colorMode } = useColorMode();
 
     return (
         <Button
