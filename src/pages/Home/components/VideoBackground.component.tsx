@@ -1,14 +1,17 @@
+import { useColorMode } from '@chakra-ui/react';
 import React from 'react';
+import BGLight from '../../../assets/backgroundLight.mp4';
 import BGDark from '../../../assets/backgroundDark.mp4';
-
 function VideoBackground() {
+    const { colorMode } = useColorMode();
+
     return (
         <video
             autoPlay
             loop
             muted
             id="bg"
-            src={BGDark}
+            src={colorMode === 'light' ? BGLight : BGDark}
             style={{
                 position: 'fixed',
                 zIndex: '-1',

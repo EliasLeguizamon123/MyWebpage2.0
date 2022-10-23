@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
+import Navbar from '../../components/Navbar';
 import AnimatedText from './components/AnimatedText.component';
 import Title from './components/Title.component';
 import VideoBackground from './components/VideoBackground.component';
@@ -6,8 +7,8 @@ import VideoBackground from './components/VideoBackground.component';
 function Home() {
     return (
         <Box>
+            <Navbar />
             <Flex
-                color="white"
                 direction="column"
                 h={'100vh'}
                 justify={'center'}
@@ -17,9 +18,9 @@ function Home() {
                 w={'100vw'}
             >
                 <Text fontSize={['2xl', '3xl', '5xl']}>
-                    Hi, mi name is <AnimatedText text={'Elías Leguizamón'} />
+                    Hi, my name is <AnimatedText text={'Elías Leguizamón'} />
                 </Text>
-                <Title text="A Fullstack Developer" />
+                <Title text="A Fullstack Developer from 🇦🇷" />
             </Flex>
             <VideoBackground />
         </Box>
