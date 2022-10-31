@@ -64,7 +64,7 @@ function CustomDrawer(props: props) {
                             w="full"
                         >
                             <CustomNavContent nav={nav} />
-                            <Box bg="pink">
+                            <Box>
                                 <Text>Reach me content</Text>
                             </Box>
                         </SimpleGrid>
