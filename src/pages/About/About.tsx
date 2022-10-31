@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar';
 
-function Projects() {
+function About() {
     return <Navbar />;
 }
 
-export default Projects;
+export default About;

@@ -10,7 +10,7 @@ function CustomNavContent(props: props) {
         <SimpleGrid columns={1} h="full" pt="2rem" textAlign="center">
             {props.nav.map((item: Navigation) => (
                 <HStack key={item.index} justify="center" py="1rem">
-                    <Text>0{item.index}</Text>
+                    <Text fontSize="sm">0{item.index}</Text>
                     <Link key={item.index} to={item.path}>
                         <Heading>{item.title}</Heading>
                     </Link>
