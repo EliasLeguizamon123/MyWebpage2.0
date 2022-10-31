@@ -34,16 +34,7 @@ function CustomDrawer(props: props) {
             >
                 <DrawerHeader>
                     <Flex w="full">
-                        <Button
-                            _hover={{
-                                color: 'primary',
-                                border: '2px dotted #fcbf49',
-                                opacity: '0.8',
-                            }}
-                            color={colorMode === 'dark' ? 'primary' : ''}
-                            variant="ghost"
-                            onClick={toggleColorMode}
-                        >
+                        <Button variant="newGhost" onClick={toggleColorMode}>
                             {colorMode === 'light' ? (
                                 <RiFlashlightLine size="28px" />
                             ) : (
@@ -51,16 +42,7 @@ function CustomDrawer(props: props) {
                             )}
                         </Button>
                         <Spacer />
-                        <Button
-                            _hover={{
-                                color: 'primary',
-                                border: '2px dotted #fcbf49',
-                                opacity: '0.8',
-                            }}
-                            color={colorMode === 'dark' ? 'primary' : ''}
-                            variant="ghost"
-                            onClick={props.onClose}
-                        >
+                        <Button variant="newGhost" onClick={props.onClose}>
                             <AiOutlineClose size="28px" />
                         </Button>
                     </Flex>
