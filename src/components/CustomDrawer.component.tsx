@@ -14,12 +14,19 @@ import {
 } from '@chakra-ui/react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { RiFlashlightLine, RiFlashlightFill } from 'react-icons/ri';
+import { Navigation } from '../models/navigation.model';
+import CustomNavContent from './CustomNavContent.component';
 interface props {
     isOpen: any;
     onClose: any;
 }
 function CustomDrawer(props: props) {
     const { colorMode, toggleColorMode } = useColorMode();
+    const nav: Navigation[] = [
+        { index: 1, title: 'Home', path: '/' },
+        { index: 2, title: 'Projects', path: '/projects' },
+        { index: 3, title: 'About', path: '/about' },
+    ];
 
     return (
         <Drawer
@@ -56,10 +63,7 @@ function CustomDrawer(props: props) {
                             spacing={10}
                             w="full"
                         >
-                            {/* //! Sacar de otro CustomComponent Box */}
-                            <Box bg="tomato">
-                                <Text>Navigation Content</Text>
-                            </Box>
+                            <CustomNavContent nav={nav} />
                             <Box bg="pink">
                                 <Text>Reach me content</Text>
                             </Box>
