@@ -17,7 +17,7 @@ function Home() {
                 textAlign="left"
                 w={'100vw'}
             >
-                <Text fontSize={['2xl', '3xl', '5xl']}>
+                <Text fontSize={['3xl', '4xl', '6xl']}>
                     Hi, my name is <AnimatedText text={'Elías Leguizamón'} />
                 </Text>
                 <Title text="A Fullstack Developer from 🇦🇷" />

@@ -1108,6 +1108,16 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/alatsi@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/alatsi/-/alatsi-4.5.10.tgz#e4789e4f9eea15d3a19b39fe39e982b9c055df7b"
+  integrity sha512-iJjvyB6xOXNfzdo4pR1Sv3WIR4ifIFPTQeFvpGvuG8R8dXhdcCsWUEb1nnJOu/3P0oMFKZLvJQjGOcXA4PbpxA==
+
+"@fontsource/raleway@^4.5.11":
+  version "4.5.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.11.tgz#6da0bad1f44e0360fe465663ac0683601d29bda7"
+  integrity sha512-WrFuS5q3tPqNci4iDwIf7lnkHY5jrkWswy6B007W//cAB7Iiw2NuxBNxrCetYpe3efPbEoFPcoKeTPqDzoWQ3A==
+
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.10.4.tgz"

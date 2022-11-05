@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import { buttonTheme } from './Buttons.theme';
 import { headingTheme } from './Heading.theme';
+import { textTheme } from './Text.theme';
 
 const theme = extendTheme({
     colors: {
@@ -11,11 +12,15 @@ const theme = extendTheme({
     components: {
         Button: buttonTheme,
         Heading: headingTheme,
+        Text: textTheme,
     },
 
     config: {
         initialColorMode: 'light',
         useSystemColorMode: false,
+    },
+    fonts: {
+        heading: `'Alatsi'`,
     },
 });
 
