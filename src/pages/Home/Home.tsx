@@ -3,8 +3,20 @@ import Navbar from '../../components/Navbar';
 import AnimatedText from './components/AnimatedText.component';
 import Title from './components/Title.component';
 import VideoBackground from './components/VideoBackground.component';
+import { useEffect } from 'react';
+import { getProjects } from '../../services/projects.service';
+import { useDispatch } from 'react-redux';
+import { chargeProjecs } from '../../redux/state/projects.state';
 
 function Home() {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        getProjects().then((res) => {
+            dispatch(chargeProjecs(res.data));
+        });
+    }, []);
+
     return (
         <Box>
             <Navbar />
