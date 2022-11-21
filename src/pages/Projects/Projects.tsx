@@ -3,7 +3,7 @@ import { Box, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
-import notFound from '../../assets/404.svg';
+import notFound from '../../assets/404.png';
 import { Project } from '@/models/project.model';
 
 function Projects() {
@@ -22,26 +22,29 @@ function Projects() {
         <Box>
             <Navbar />
             <SimpleGrid
-                columns={[1, 2, 2, 3]}
+                columns={[1, 2, 3, 3]}
                 p={8}
                 pt="6rem"
                 spacing={8}
                 style={{
                     placeItems: 'center',
                 }}
-                w="100vw"
+                w="full"
             >
                 {myProjects.map((project: Project) => (
                     <Box
                         key={project.id}
                         bg="white"
-                        boxSize={['300px', '300px', '300px', '400px']}
+                        boxSize={'250px'}
+                        boxShadow='2xl'
+                        borderRadius='12px'
                     >
                         <Image
                             fallbackSrc={notFound}
                             h="full"
                             objectFit="cover"
                             src={project.images[0]}
+                            borderRadius='12px'
                             w="full"
                         />
                     </Box>
