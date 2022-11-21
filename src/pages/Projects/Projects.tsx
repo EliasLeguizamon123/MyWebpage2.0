@@ -1,15 +1,14 @@
-import { AppStore } from '../../redux/store';
 import { getProjects } from '../../services/projects.service';
 import { Box, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import Navbar from '../../components/Navbar';
 import notFound from '../../assets/404.svg';
+import { Project } from '@/models/project.model';
 
 function Projects() {
-    const projects = useSelector((store: AppStore) => store.projects);
-    const [myProjects, setmyProjects] = useState(projects);
+    const projects = sessionStorage.getItem('projects')
+    const [myProjects, setmyProjects] = useState(JSON.parse(projects));
 
     useEffect(() => {
         if (myProjects.length < 1) {
@@ -32,7 +31,7 @@ function Projects() {
                 }}
                 w="100vw"
             >
-                {myProjects.map((project) => (
+                {myProjects.map((project: Project) => (
                     <Box
                         key={project.id}
                         bg="white"
