@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = 'https://myporfolio-back-production.up.railway.app';
 
 const instance = axios.create({
     baseURL,
