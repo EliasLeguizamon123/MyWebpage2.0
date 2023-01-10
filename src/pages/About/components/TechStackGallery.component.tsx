@@ -20,13 +20,10 @@ import {
 } from 'react-icons/si';
 
 function TechStackGallery() {
-    const { colorMode } = useColorMode();
-
     return (
         <SimpleGrid
-            color={colorMode === 'light' ? 'primary' : ''}
-            columns={[2, 3, 5]}
-            pl={['5rem', 8, 4]}
+            columns={[3, 5]}
+            pl={[14, 4]}
             pt={4}
             spacingX={-4}
             spacingY={8}

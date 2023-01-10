@@ -11,7 +11,7 @@ function About() {
                 h={'100vh'}
                 pl={[6, 8, 44]}
                 position={'absolute'}
-                pt={['8rem', '10rem', '17rem']}
+                pt={['8rem', '10rem', '15rem']}
                 textAlign="left"
                 w={'80vw'}
             >

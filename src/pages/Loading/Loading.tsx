@@ -11,7 +11,7 @@ export const Loading = () => {
             minH={'max-content'}
             w="100vw"
         >
-            <Spinner color="blue.200" size="xl" />
+            <Spinner color="primary" size="xl" />
             <Text>Loading...</Text>
         </Flex>
     );
