@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = 'https://backend-elias-dev.onrender.com/';
 
 const instance = axios.create({
     baseURL,

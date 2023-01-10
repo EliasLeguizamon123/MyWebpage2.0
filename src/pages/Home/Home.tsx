@@ -3,8 +3,17 @@ import Navbar from '../../components/Navbar';
 import AnimatedText from './components/AnimatedText.component';
 import Title from './components/Title.component';
 import VideoBackground from './components/VideoBackground.component';
+import { useEffect } from 'react';
+import { getProjects } from '../../services/projects.service';
 
 function Home() {
+    useEffect(() => {
+        getProjects().then((res) => {
+            // dispatch(chargeProjecs(res.data));
+            sessionStorage.setItem('projects', JSON.stringify(res.data));
+        });
+    }, []);
+
     return (
         <Box>
             <Navbar />
