@@ -1,6 +1,6 @@
 import { Project } from '@/models/project.model';
 import { Box, Image } from '@chakra-ui/react';
-import notFound from '../../../assets/404.svg';
+import notFound from '../../../assets/404.png';
 
 export interface props {
     project: Project;
