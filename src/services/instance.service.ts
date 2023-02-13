@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://eliasleguizamon-cpkyqn4zmb5g.deno.dev';
+const baseURL = 'https://eliasleguizamon.deno.dev/';
 
 const instance = axios.create({
     baseURL,
