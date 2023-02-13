@@ -12,13 +12,9 @@ function Projects() {
     const [myProjects, setmyProjects] = useState<Project[]>();
 
     useEffect(() => {
-        console.log(myProjects);
-
-        if (myProjects === undefined) {
-            getProjects().then((res) => {
-                setmyProjects(res.data);
-            });
-        }
+        getProjects().then((res) => {
+            setmyProjects(res.data);
+        });
     }, []);
 
     return (

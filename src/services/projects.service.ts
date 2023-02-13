@@ -14,3 +14,17 @@ export const getProjects = async () => {
         }
     }
 };
+
+export const getProjectByID = async (id: string) => {
+    try {
+        const { data } = await instance.get(`/projects/${id}`);
+
+        return data;
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            return error.response;
+        } else {
+            return error;
+        }
+    }
+};

@@ -6,6 +6,7 @@ export default function Router() {
     const Home = lazy(() => import('../pages/Home/Home'));
     const Projects = lazy(() => import('../pages/Projects/Projects'));
     const About = lazy(() => import('../pages/About/About'));
+    const ProjectDetail = lazy(() => import('../pages/Projects/ProjectDetail'));
 
     return (
         <HashRouter>
@@ -14,6 +15,7 @@ export default function Router() {
                     <Route element={<Loading />} path="/loading" />
                     <Route element={<Home />} path="/" />
                     <Route element={<Projects />} path="/projects" />
+                    <Route element={<ProjectDetail />} path="/projects/:id" />
                     <Route element={<About />} path="/about" />
                 </Routes>
             </Suspense>
