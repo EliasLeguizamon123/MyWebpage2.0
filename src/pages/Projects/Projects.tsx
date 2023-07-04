@@ -1,5 +1,5 @@
 import { getProjects } from '../../services/projects.service';
-import { Box, Flex, SimpleGrid } from '@chakra-ui/react';
+import { Box, VStack } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
@@ -14,20 +14,25 @@ function Projects() {
 
     useEffect(() => {
         getProjects().then((res) => {
-            setmyProjects(res.data);
-            setloading(false);
+            if (res.status === 200) {
+                setmyProjects(res.data);
+                setloading(false);
+            } else {
+                setmyProjects([]);
+                setloading(false);
+            }
         });
     }, []);
 
     return (
         <Box>
             <Navbar />
-            {myProjects !== undefined ? (
-                <Flex>
+            {!loading ? (
+                <VStack pt={24} w="full">
                     {myProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
-                </Flex>
+                </VStack>
             ) : (
                 <Loading />
             )}

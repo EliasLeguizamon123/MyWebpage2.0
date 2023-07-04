@@ -6,6 +6,7 @@ const fires = defineStyle({
     background: 'primary',
     color: 'backgroundD',
     _hover: {
+        cursor: 'auto',
         transitionDuration: '0.5s',
         background: 'transparent',
         color: 'primary',
