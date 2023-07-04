@@ -13,22 +13,24 @@ function ProjectCard(props: props) {
     };
 
     return (
-        <Box
-            key={props.project.id}
-            boxSize={['300px', '200px', '250px', '350px']}
-            style={{ cursor: 'pointer' }}
-            onClick={() => handlerNavigateToProjectID()}
-        >
-            <Image
-                borderRadius={'lg'}
-                boxShadow="lg"
-                fallbackSrc={notFound}
-                h="full"
-                objectFit="cover"
-                src={props.project.images[0]}
-                w="full"
-            />
-        </Box>
+        <>
+            {/* <Box
+                key={props.project.id}
+                boxSize={['300px', '200px', '250px', '300px']}
+                style={{ cursor: 'pointer' }}
+                onClick={() => handlerNavigateToProjectID()}
+            >
+                <Image
+                    borderRadius={'lg'}
+                    boxShadow="lg"
+                    fallbackSrc={notFound}
+                    h="full"
+                    objectFit="cover"
+                    src={props.project.images[0]}
+                    w="full"
+                />
+            </Box> */}
+        </>
     );
 }
 

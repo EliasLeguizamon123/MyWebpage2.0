@@ -1,5 +1,5 @@
 import { getProjects } from '../../services/projects.service';
-import { Box, SimpleGrid } from '@chakra-ui/react';
+import { Box, Flex, SimpleGrid } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
@@ -10,10 +10,12 @@ import ProjectCard from './components/ProjectCard.component';
 
 function Projects() {
     const [myProjects, setmyProjects] = useState<Project[]>();
+    const [loading, setloading] = useState<boolean>(true);
 
     useEffect(() => {
         getProjects().then((res) => {
             setmyProjects(res.data);
+            setloading(false);
         });
     }, []);
 
@@ -21,20 +23,11 @@ function Projects() {
         <Box>
             <Navbar />
             {myProjects !== undefined ? (
-                <SimpleGrid
-                    columns={[1, 2, 2, 3]}
-                    p={8}
-                    pt="6rem"
-                    spacing={8}
-                    style={{
-                        placeItems: 'center',
-                    }}
-                    w="100vw"
-                >
+                <Flex>
                     {myProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
-                </SimpleGrid>
+                </Flex>
             ) : (
                 <Loading />
             )}

@@ -32,10 +32,12 @@ function CustomDrawer(props: props) {
     ];
 
     const resume = () => {
-        window.open(
-            'https://doc-08-04-apps-viewer.googleusercontent.com/viewer/secure/pdf/65rr3auhvo6pueg1dksmsgd046e1fotd/44eied7puul5hatcs8c4frniiu1pt03h/1667674875000/drive/10755510647436254399/ACFrOgCoBesAijndlLJj2cG5MVjSAwKTCvWgk4XSz98Bs4TQOBWPepgUeYgybxpo3MYLjBV8_WEO6s6xp1LDS_FzoeZPFiBK3fA0EaKY3DCKp7G2-3SXHC_Nm6hlxNlb8vU_zIGKYMC0SYfu9-aK?print=true&nonce=8cl9q5k4obt1e&user=10755510647436254399&hash=4r46lcr4s39qmtuhfg5pm7avnfdjkedl',
-            'blank'
-        );
+        const link = document.createElement('a');
+
+        link.href =
+            'https://drive.google.com/file/d/1fqOAj8kaUcZYxZ41UxjNCxL-00RY08qa/view?usp=drive_link';
+        link.download = 'Elias Leguizamon - Resume.pdf';
+        link.click();
     };
 
     return (
