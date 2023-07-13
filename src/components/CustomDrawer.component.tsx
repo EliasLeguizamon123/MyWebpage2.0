@@ -31,15 +31,6 @@ function CustomDrawer(props: props) {
         { index: 3, title: 'About', path: '/about' },
     ];
 
-    const resume = () => {
-        const link = document.createElement('a');
-
-        link.href =
-            'https://drive.google.com/file/d/1fqOAj8kaUcZYxZ41UxjNCxL-00RY08qa/view?usp=drive_link';
-        link.download = 'Elias Leguizamon - Resume.pdf';
-        link.click();
-    };
-
     return (
         <Drawer
             isOpen={props.isOpen}
@@ -69,7 +60,7 @@ function CustomDrawer(props: props) {
                 <DrawerBody>
                     <Flex w="full">
                         <SimpleGrid
-                            columns={[1, 2]}
+                            columns={[1, 1, 2, 2]}
                             px={4}
                             py={10}
                             spacing={10}
@@ -115,9 +106,15 @@ function CustomDrawer(props: props) {
                     </Flex>
                 </DrawerBody>
                 <DrawerFooter display={['none', 'none', 'flex']}>
-                    <Button mt={'4rem'} variant="newGhost" onClick={resume}>
-                        <HiDocumentArrowDown />
-                    </Button>
+                    <a
+                        href="https://drive.google.com/file/d/1fqOAj8kaUcZYxZ41UxjNCxL-00RY08qa/view?usp=drive_link"
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        <Button mt={'4rem'} variant="newGhost">
+                            <HiDocumentArrowDown />
+                        </Button>
+                    </a>
                 </DrawerFooter>
             </DrawerContent>
         </Drawer>

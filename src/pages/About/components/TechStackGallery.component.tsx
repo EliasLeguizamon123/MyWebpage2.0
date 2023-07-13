@@ -1,4 +1,4 @@
-import { SimpleGrid, useColorMode } from '@chakra-ui/react';
+import { Button, SimpleGrid } from '@chakra-ui/react';
 import {
     DiJavascript1,
     DiPython,
@@ -17,34 +17,163 @@ import {
     SiMongodb,
     SiMysql,
     SiElectron,
+    SiTailwindcss,
+    SiDeno,
+    SiExpress,
+    SiDocker,
+    SiGit,
+    SiTypescript,
+    SiIonic,
+    SiMocha,
+    SiChai,
+    SiPug,
 } from 'react-icons/si';
 
 function TechStackGallery() {
+    const tech = [
+        {
+            icon: <DiJavascript1 size="32px" />,
+            title: 'Javascript',
+            url: 'https://www.javascript.com/',
+        },
+        {
+            icon: <DiPython size="32px" />,
+            title: 'Python',
+            url: 'https://www.python.org/',
+        },
+        {
+            icon: <SiTypescript size="32px" />,
+            title: 'Typescript',
+            url: 'https://www.typescriptlang.org/',
+        },
+        {
+            icon: <SiExpress size="32px" />,
+            title: 'Express',
+            url: 'https://expressjs.com/',
+        },
+        {
+            icon: <SiMocha size="32px" />,
+            title: 'Mocha',
+            url: 'https://mochajs.org/',
+        },
+        {
+            icon: <SiChai size="32px" />,
+            title: 'Chai',
+            url: 'https://www.chaijs.com/',
+        },
+        {
+            icon: <DiNodejsSmall size="32px" />,
+            title: 'Node.js',
+            url: 'https://nodejs.org/',
+        },
+        {
+            icon: <SiDeno size="32px" />,
+            title: 'Deno',
+            url: 'https://deno.land/',
+        },
+        {
+            icon: <SiNodemon size="32px" />,
+            title: 'Nodemon',
+            url: 'https://nodemon.io/',
+        },
+        {
+            icon: <SiPug size="32px" />,
+            title: 'Pug',
+            url: 'https://pugjs.org/',
+        },
+        {
+            icon: <DiReact size="32px" />,
+            title: 'React',
+            url: 'https://reactjs.org/',
+        },
+        {
+            icon: <DiAngularSimple size="32px" />,
+            title: 'Angular',
+            url: 'https://angular.io/',
+        },
+        {
+            icon: <SiChakraui size="32px" />,
+            title: 'Chakra UI',
+            url: 'https://chakra-ui.com/',
+        },
+        {
+            icon: <SiTailwindcss size="32px" />,
+            title: 'Tailwind',
+            url: 'https://tailwindcss.com/',
+        },
+        {
+            icon: <DiNpm size="32px" />,
+            title: 'NPM',
+            url: 'https://www.npmjs.com/',
+        },
+        {
+            icon: <SiYarn size="32px" />,
+            title: 'Yarn',
+            url: 'https://yarnpkg.com/',
+        },
+        {
+            icon: <SiVite size="32px" />,
+            title: 'Vite',
+            url: 'https://vitejs.dev/',
+        },
+        {
+            icon: <SiPrisma size="32px" />,
+            title: 'Prisma',
+            url: 'https://www.prisma.io/',
+        },
+        {
+            icon: <SiSequelize size="32px" />,
+            title: 'Sequelize',
+            url: 'https://sequelize.org/',
+        },
+        {
+            icon: <SiMongodb size="32px" />,
+            title: 'MongoDB',
+            url: 'https://www.mongodb.com/',
+        },
+        {
+            icon: <SiMysql size="32px" />,
+            title: 'MySQL',
+            url: 'https://www.mysql.com/',
+        },
+        {
+            icon: <SiElectron size="32px" />,
+            title: 'Electron',
+            url: 'https://www.electronjs.org/',
+        },
+        {
+            icon: <SiDocker size="32px" />,
+            title: 'Docker',
+            url: 'https://www.docker.com/',
+        },
+        {
+            icon: <SiGit size="32px" />,
+            title: 'Git',
+            url: 'https://git-scm.com/',
+        },
+        {
+            icon: <SiIonic size="32px" />,
+            title: 'Ionic',
+            url: 'https://ionicframework.com/',
+        },
+    ];
+
     return (
         <SimpleGrid
-            columns={[3, 5]}
-            pl={[14, 4]}
+            columns={[1, 2, 3, 5]}
+            gap={2}
             pt={4}
-            spacingX={-4}
-            spacingY={8}
             textAlign="center"
-            w="85vw"
+            w="full"
         >
-            <DiJavascript1 size="32px" />
-            <DiPython size="32px" />
-            <DiNodejsSmall size="32px" />
-            <SiNodemon size="32px" />
-            <DiReact size="32px" />
-            <DiAngularSimple size="32px" />
-            <SiChakraui size="32px" />
-            <DiNpm size="32px" />
-            <SiYarn size="32px" />
-            <SiVite size="32px" />
-            <SiPrisma size="32px" />
-            <SiSequelize size="32px" />
-            <SiMongodb size="32px" />
-            <SiMysql size="32px" />
-            <SiElectron size="32px" />
+            {tech.map((item, index) => (
+                <a key={index} href={item.url} rel="noreferrer" target="_blank">
+                    <Button variant="tech" w="full">
+                        {item.icon}
+                        {item.title}
+                    </Button>
+                </a>
+            ))}
         </SimpleGrid>
     );
 }

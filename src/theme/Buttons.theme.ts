@@ -15,6 +15,20 @@ const newGhost = defineStyle({
     fontSize: '28px',
 });
 
+const tech = defineStyle({
+    _hover: {
+        bg: 'primary',
+        boxShadow: '2px 2px 5px rgba(0, 0, 0, 1)',
+    },
+    bg: 'transparent',
+    blockSize: 'auto',
+    flexDirection: 'column',
+    maxH: '5em',
+    minH: '5em',
+    textAlign: 'center',
+    transitionDuration: '0.7s',
+});
+
 export const buttonTheme = defineStyleConfig({
-    variants: { newGhost },
+    variants: { newGhost, tech },
 });

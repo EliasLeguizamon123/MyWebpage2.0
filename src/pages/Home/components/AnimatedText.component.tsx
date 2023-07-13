@@ -4,8 +4,8 @@ import { title } from '../../../models/title.model';
 function AnimatedText(props: title) {
     const animatedStyles = useSpring({
         loop: true,
-        to: [{ color: '#D95D39' }, { color: '#FAFAFA' }],
-        from: { color: '#E2D475' },
+        to: [{ color: '#75aee0' }, { color: '#E2D475' }],
+        from: { color: '#FAFAFA' },
         config: {
             duration: 500,
         },

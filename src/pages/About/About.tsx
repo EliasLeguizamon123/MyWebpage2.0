@@ -9,11 +9,11 @@ function About() {
             <Flex
                 direction="column"
                 h={'100vh'}
-                pl={[6, 8, 44]}
                 position={'absolute'}
                 pt={['8rem', '10rem', '15rem']}
+                px={'2rem'}
                 textAlign="left"
-                w={'80vw'}
+                w={'full'}
             >
                 <Image />
                 <Text as="cite" fontSize="xl" textAlign="center">
