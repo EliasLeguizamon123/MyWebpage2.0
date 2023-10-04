@@ -22,7 +22,13 @@ const handleLink = (link: string) => {
 
 function ProjectCard(props: props) {
     return (
-        <SimpleGrid columns={[1, 1, 1, 2]} gap={2} w="full">
+        <SimpleGrid
+            borderRadius="2xl"
+            boxShadow="sm"
+            columns={[1, 1, 1, 2]}
+            gap={2}
+            w="full"
+        >
             <Flex
                 direction={'column'}
                 p={2}
@@ -32,7 +38,7 @@ function ProjectCard(props: props) {
                 <Text as="i" fontSize="2xl">
                     {props.project.title}
                 </Text>
-                <Text>{props.project.description}</Text>
+                <Text pl={1}>{props.project.description}</Text>
                 <Box p={1}>
                     {props.project.tools.map((tool) => (
                         <Badge key={tool} m={1} variant="fires">

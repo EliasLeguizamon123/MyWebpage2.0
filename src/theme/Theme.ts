@@ -8,6 +8,7 @@ const theme = extendTheme({
         primary: '#fcbf49',
         backgroundL: '#EDEDED',
         backgroundD: '#22272e',
+        border: '#A9A9A9',
     },
     components: {
         Button: buttonTheme,

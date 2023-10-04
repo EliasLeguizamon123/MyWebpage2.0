@@ -13,22 +13,24 @@ function Projects() {
     const [loading, setloading] = useState<boolean>(true);
 
     useEffect(() => {
-        getProjects().then((res) => {
-            if (res.status === 200) {
-                setmyProjects(res.data);
+        getProjects()
+            .then((res) => {
+                if (res.status === 200) {
+                    setmyProjects(res.data);
+                } else {
+                    setmyProjects([]);
+                }
+            })
+            .finally(() => {
                 setloading(false);
-            } else {
-                setmyProjects([]);
-                setloading(false);
-            }
-        });
+            });
     }, []);
 
     return (
         <Box>
             <Navbar />
             {!loading ? (
-                <VStack pt={24} w="full">
+                <VStack pt={24} px={2} w="full">
                     {myProjects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}

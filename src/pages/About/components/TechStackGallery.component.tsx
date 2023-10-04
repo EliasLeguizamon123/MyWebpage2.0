@@ -27,6 +27,8 @@ import {
     SiMocha,
     SiChai,
     SiPug,
+    SiBun,
+    SiVitest,
 } from 'react-icons/si';
 
 function TechStackGallery() {
@@ -155,6 +157,16 @@ function TechStackGallery() {
             icon: <SiIonic size="32px" />,
             title: 'Ionic',
             url: 'https://ionicframework.com/',
+        },
+        {
+            icon: <SiBun size="32px" />,
+            title: 'Bun',
+            url: 'https://bun.sh/',
+        },
+        {
+            icon: <SiVitest size="32px" />,
+            title: 'Vitest',
+            url: 'https://vitest.dev/',
         },
     ];
 
